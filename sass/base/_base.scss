@@ -14,4 +14,13 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  color: $color-grey-dark-2;
+
+  min-height: 100vh;
+
+  background-image: linear-gradient(
+    125deg,
+    $color-primary-dark,
+    $color-primary-light
+  );
 }

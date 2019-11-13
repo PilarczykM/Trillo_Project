@@ -1,17 +1,24 @@
-/*
-COLORS
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-Primary: #eb2f64
-Primary light: #FF3366
-Primary dark: #BA265D
+html {
+  font-size: 62.5%; }
 
-Grey light 1: #faf9f9
-Grey light 2: #f4f2f2
-Grey light 3: #f0eeee
-Grey light 4: #ccc
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #999;
+  min-height: 100vh;
+  background-image: linear-gradient(125deg, #ba265d, #ff3366); }
 
-Grey dark 1: #333
-Grey dark 2: #777
-Grey dark 3: #999
-
-*/
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1200rem; }
