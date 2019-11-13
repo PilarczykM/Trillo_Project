@@ -9,8 +9,13 @@
 
 .header {
   height: 7rem;
+  background-color: #fff;
   border-bottom: 1px solid $color-grey-light-2;
+  font-size: 1.4rem;
+
   display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center in cross axis */
 }
 
 .content {
