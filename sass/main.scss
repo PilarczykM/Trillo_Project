@@ -1,7 +1,12 @@
+@import "./abstracts/animations";
 @import "./abstracts/variables";
 
 @import "./base/base";
 
+@import "./components/button";
+@import "./components/gallery";
 @import "./components/header";
+@import "./components/overview";
 @import "./components/side-navigation";
+
 @import "./layout/layout";
