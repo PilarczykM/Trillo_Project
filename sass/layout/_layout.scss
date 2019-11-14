@@ -24,11 +24,16 @@
 
 .sidebar {
   background-color: $color-grey-dark-1;
-
   flex: 0 0 18%; /* 0 - Dont grow if there is space | 0 - Dont shrink if there is no space | 18% - Take 18% of content width */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
+  height: 80rem;
+
   background-color: #fff;
   flex: 1; /* Grow as mach as you can */
 }

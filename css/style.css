@@ -94,6 +94,52 @@ body {
   .user-nav__user-name {
     padding-left: 2rem; }
 
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  padding: 3rem 0; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item--active {
+      background-color: #eb2f64; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: 1rem; }
+    .side-nav__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: #eb2f64;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+    .side-nav__item:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
+  .side-nav__link:link, .side-nav__link:visited {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    color: #faf9f9;
+    z-index: 10; }
+    .side-nav__link:link span, .side-nav__link:visited span {
+      color: currentColor; }
+  .side-nav__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 1rem;
+    fill: #faf9f9; }
+
+.legal {
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+  padding: 2.5rem; }
+
 .container {
   margin: 8rem auto;
   max-width: 120rem;
@@ -117,9 +163,13 @@ body {
 .sidebar {
   background-color: #333;
   flex: 0 0 18%;
-  /* 0 - Dont grow if there is space | 0 - Dont shrink if there is no space | 18% - Take 18% of content width */ }
+  /* 0 - Dont grow if there is space | 0 - Dont shrink if there is no space | 18% - Take 18% of content width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
+  height: 80rem;
   background-color: #fff;
   flex: 1;
   /* Grow as mach as you can */ }
