@@ -127,3 +127,70 @@
   flex-direction: column;
   align-items: center;
 }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    margin-bottom: 2.5rem;
+  }
+
+  &__btn {
+    position: relative;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+
+    overflow: hidden;
+
+    &--visible {
+      display: inline-block;
+      padding: 2rem 7.5rem;
+      transition: all 0.2s;
+    }
+
+    &--invisible {
+      display: inline-block;
+      position: absolute;
+
+      height: 100%;
+      width: 100%;
+      padding: 2rem 0;
+      left: 0;
+      top: -100%;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        $color-primary-dark,
+        $color-primary-light
+      );
+
+      animation: pulsate 1s infinite;
+    }
+
+    &:hover &--visible {
+      transform: translateY(100%);
+    }
+
+    &:hover &--invisible {
+      top: 0;
+    }
+  }
+}

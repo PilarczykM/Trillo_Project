@@ -355,3 +355,42 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__book-now {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem; }
+  .cta__btn {
+    position: relative;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, #ff3366, #ba265d);
+    overflow: hidden; }
+    .cta__btn--visible {
+      display: inline-block;
+      padding: 2rem 7.5rem;
+      transition: all 0.2s; }
+    .cta__btn--invisible {
+      display: inline-block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      padding: 2rem 0;
+      left: 0;
+      top: -100%;
+      transition: all 0.2s; }
+    .cta__btn:hover {
+      background-image: linear-gradient(to right, #ba265d, #ff3366);
+      animation: pulsate 1s infinite; }
+    .cta__btn:hover .cta__btn--visible {
+      transform: translateY(100%); }
+    .cta__btn:hover .cta__btn--invisible {
+      top: 0; }
