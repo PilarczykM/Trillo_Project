@@ -11,6 +11,10 @@
 
     &:not(:last-child) {
       margin-bottom: 1rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
     }
 
     &::before {
@@ -43,6 +47,10 @@
 
     z-index: 10;
 
+    @media only screen and(max-width: $bp-small) {
+      flex-direction: column;
+    }
+
     span {
       color: currentColor;
     }
@@ -54,6 +62,17 @@
 
     margin-right: 1rem;
     fill: $color-grey-light-1;
+
+    @media only screen and(max-width: $bp-small) {
+      margin: 0;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 0.5rem;
   }
 }
 
@@ -62,4 +81,8 @@
   color: $color-grey-light-4;
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }

@@ -23,6 +23,9 @@
 
 html {
   font-size: 62.5%; }
+  @media screen and (max-width: 62.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -61,6 +64,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      padding: 1rem 0; } }
   .search__input {
     width: 90%;
     border: none;
@@ -228,6 +236,9 @@ body {
       background-color: #eb2f64; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 1rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
     .side-nav__item::before {
       content: "";
       position: absolute;
@@ -250,6 +261,9 @@ body {
     padding: 1.5rem 3rem;
     color: #faf9f9;
     z-index: 10; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column; } }
     .side-nav__link:link span, .side-nav__link:visited span {
       color: currentColor; }
   .side-nav__icon {
@@ -257,18 +271,34 @@ body {
     width: 1.75rem;
     margin-right: 1rem;
     fill: #faf9f9; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin: 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem; } }
 
 .legal {
   font-size: 1.2rem;
   color: #ccc;
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .container {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: #faf9f9;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4); }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   height: 7rem;
@@ -279,9 +309,16 @@ body {
   justify-content: space-between;
   align-items: center;
   /* Center in cross axis */ }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      height: 10rem;
+      flex-wrap: wrap; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: #333;
@@ -302,6 +339,10 @@ body {
   font-size: 1.4rem;
   background-color: #faf9f9;
   border-bottom: 1px solid #f4f2f2; }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column;
+      padding: 2rem; } }
 
 .description {
   flex: 0 0 60%;
@@ -309,6 +350,11 @@ body {
   font-size: 1.4rem;
   background-color: #fff;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06); }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      flex: 1;
+      padding: 2rem;
+      margin: 2rem 0; } }
   .description .list {
     display: flex;
     flex-wrap: wrap;
@@ -317,6 +363,10 @@ body {
     margin: 2rem 0;
     border-top: 1px solid #f4f2f2;
     border-bottom: 1px solid #f4f2f2; }
+    @media only screen and (max-width: 56.25em) {
+      .description .list {
+        padding: 2rem 0;
+        margin: 1rem 0; } }
     .description .list__item {
       flex: 0 0 50%;
       margin-bottom: 0.7rem; }
@@ -339,13 +389,16 @@ body {
     color: #f0eeee; }
     .description .recommend__count {
       color: #777; }
+      @media only screen and (max-width: 37.5em) {
+        .description .recommend__count {
+          font-size: 1.5rem; } }
     .description .recommend__photo {
       box-sizing: content-box;
       height: 4rem;
       width: 4rem;
       border: 2px solid #fff;
       border-radius: 100px;
-      margin-left: -1.5rem; }
+      margin-left: -2rem; }
     .description .recommend__friends {
       display: flex;
       align-items: center; }
@@ -359,11 +412,17 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .cta {
+      padding: 1.5rem 0; } }
   .cta__book-now {
     font-size: 1.2rem;
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .cta__book-now {
+        margin-bottom: 1.5rem; } }
   .cta__btn {
     position: relative;
     font-size: 1.5rem;
