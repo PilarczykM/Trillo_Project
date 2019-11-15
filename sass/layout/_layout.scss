@@ -40,6 +40,8 @@
 
   padding: 4.5rem;
 
+  font-size: 1.4rem;
+
   background-color: $color-grey-light-1;
   border-bottom: 1px solid $color-grey-light-2;
 }
@@ -121,5 +123,7 @@
 
 .user-reviews {
   flex: 1;
-  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
